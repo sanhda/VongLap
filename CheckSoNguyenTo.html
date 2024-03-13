@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In So Nguyen To</title>
+</head>
+<body>
+
+<script>
+    // check if one value is so nguyen to
+    function isSoNguyenTo(value) {
+        for (let i = 2; i < value; i++) {
+            if (value%i===0) {return false}
+        }
+
+        return true
+    }
+
+    // print number of so nguyen to
+    function printSoNguyenTo(number) {
+        let countSNT = 0;
+
+        for (let i = 2; countSNT<number; i++) {
+            if (isSoNguyenTo(i)) {
+                document.write(i + '<br>');
+                countSNT++;
+            }
+        }
+    }
+
+    let number = +prompt("Nhập số lượng số nguyên tố cần print: ")
+    printSoNguyenTo(number)
+</script>
+</body>
+</html>

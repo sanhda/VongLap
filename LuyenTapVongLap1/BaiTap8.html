@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai Tap 8</title>
+</head>
+<body>
+
+<button onclick="doanSo()">Chơi</button>
+
+<script>
+    const doanSo = () => {
+        let range = +prompt("Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu: ")
+        let secretValue = Math.floor(Math.random()*range);
+        let guessValue=null;
+        let count = 0;
+
+        while (guessValue!==secretValue && count<=3) {
+            guessValue = +prompt("Nhập số muốn đoán: ")
+            count++;
+
+            if (guessValue>secretValue) {
+                alert("Số bạn đoán lớn hơn")
+            } else if (guessValue<secretValue) {
+                alert("Số bạn đoán nhỏ hơn")
+            }
+        }
+
+        if (guessValue===secretValue) {document.write("Chúc mừng. Bạn đã đoán đúng số")}
+        else {alert("Bạn đã hết số lần chơi")}
+    }
+</script>
+</body>
+</html>

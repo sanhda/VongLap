@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sinh bảng cửu chương</title>
+
+    <style>
+        table {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<table id="bang_cuu_chuong"></table>
+
+<script>
+    let table = document.getElementById('bang_cuu_chuong');
+
+    for (let i = 1; i < 10; i++) {
+        let tr = document.createElement('tr');
+        for (let j = 2; j < 10; j++) {
+            let td = document.createElement('td');
+            td.innerText = `${j}x${i}=${j*i}`;
+            tr.appendChild(td)
+        }
+        table.appendChild(tr);
+    }
+
+</script>
+</body>
+</html>

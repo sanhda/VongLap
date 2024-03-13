@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 4</title>
+</head>
+<body>
+
+<script>
+    let symbol = '&lowast;';
+    let space = '&nbsp;&nbsp;';
+    let length=21;
+    const inLength = (numberFirstSymbol, numberSpace, numberLastSymbol) => {
+        for (let i = 0; i < numberFirstSymbol; i++) {
+            document.write(symbol)
+        }
+        for (let i = 0; i < numberSpace; i++) {
+            document.write(space)
+        }
+        for (let i = 0; i < numberLastSymbol; i++) {
+            document.write(symbol)
+        }
+        document.write('<br>');
+    }
+
+    const inChuNhat = () => {
+        // Vi trí 1
+        inLength(length, 0, 0)
+        for (let i = 0; i < 5; i++) {
+            inLength(1, length-2, 1)
+        }
+        inLength(length, 0, 0)
+    }
+
+    inChuNhat();
+</script>
+</body>
+</html>

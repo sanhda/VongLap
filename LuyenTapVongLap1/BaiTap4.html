@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 4</title>
+</head>
+<body>
+
+<script>
+    let secondPrev = 1, firstPrev = 2, targetPrev = 3
+
+    while (targetPrev%5!==0) {
+        targetPrev = firstPrev + secondPrev
+        secondPrev = firstPrev;
+        firstPrev = targetPrev;
+    }
+
+    alert(`First Fibonacci that divisible for 5 is ${targetPrev}`);
+
+</script>
+</body>
+</html>

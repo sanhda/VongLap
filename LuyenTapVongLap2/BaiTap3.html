@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 3</title>
+</head>
+<body>
+
+<script>
+    let symbol = '&lowast;'
+    let space = '&nbsp;&nbsp;'
+    const inCanh = (numberSpace, numberSymbol) => {
+        for (let i = 0; i < numberSpace; i++) {
+            document.write(space)
+        }
+
+        for (let i = 0; i < numberSymbol; i++) {
+            document.write(symbol)
+        }
+        document.write('<br>');
+    }
+
+    const inTamGiacVuong = () => {
+        // Vi trí 1
+        for (let i = 1; i <= 5; i++) {
+            inCanh(0, i)
+        }
+        document.write('<br>');
+
+        // Vi trí 2
+        for (let i = 5; i >= 1; i--) {
+            inCanh(0, i)
+        }
+        document.write('<br>');
+
+        // Vi trí 3
+        for (let i = 1; i <= 5; i++) {
+            inCanh(5-i, i)
+        }
+        document.write('<br>');
+
+        // Vi trí 4
+        for (let i = 5; i >= 1; i--) {
+            inCanh(5-i, i)
+        }
+        document.write('<br>');
+    }
+
+    inTamGiacVuong();
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 2</title>
+</head>
+<body>
+
+<script>
+    const tinhGiaiThua = () => {
+        let number = +prompt("Nhập số cần tính giai thừa")
+        let giaiThua = 1
+
+        for (let i = 1; i <= number; i++) {
+            giaiThua*=i;
+        }
+        alert(`Giai thừa của ${number} là: ${giaiThua}`)
+    }
+
+    tinhGiaiThua();
+</script>
+</body>
+</html>

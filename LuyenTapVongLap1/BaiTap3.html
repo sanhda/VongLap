@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 3</title>
+</head>
+<body>
+
+<script>
+    let secondPrev = 1, firstPrev = 2
+    document.write(secondPrev + '<br>');
+    document.write(firstPrev + '<br>')
+
+    for (let i = 0; i < 18; i++) {
+        let current = firstPrev + secondPrev
+        document.write(current + '<br>');
+        secondPrev = firstPrev;
+        firstPrev = current;
+    }
+
+</script>
+</body>
+</html>
